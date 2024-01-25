@@ -188,6 +188,9 @@
 .button:hover{
     background: green;
 }
+.formerror{
+    color: red;
+}
 @media (max-width: 480px){
     .container{
         width: 100%;

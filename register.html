@@ -15,10 +15,11 @@
         <div class="container">
             <h2>Registration Form</h2>
             <div class="form-container">
-                <form>
-                    <div class="input-name">
+                <form action="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
+                    <div class="input-name" id="name">
                         <i class="fa-solid fa-user"></i>                    
-                        <input type="text" placeholder=" Your Name" required class="name">
+                        <input type="text" name="fname" placeholder=" Your Name" required class="name">
+                        <b><span class="formerror"> </span></b>
                     </div>
                     <div class="input-name">
                         <i class="fa-solid fa-phone"></i>                   
@@ -97,4 +98,5 @@
             </div>
         </div>
 </body>
+<script src="script.js"></script>
 </html>
