@@ -15,26 +15,27 @@
         <div class="container">
             <h2>Registration Form</h2>
             <div class="form-container">
-                <form>
-                    <div class="input-name">
+                <form action="#" name="myForm" onsubmit="return validateForm()" method="post">
+                    <div class="input-name" id="name">
                         <i class="fa-solid fa-user"></i>                    
-                        <input type="text" placeholder=" Your Name" required class="name">
-                    </div>
-                    <div class="input-name">
-                        <i class="fa-solid fa-phone"></i>                   
-                        <input type="numbe" placeholder=" Mobile Number" required class="name">
-                    </div>
-                    <div class="input-name">
-                        <i class="fa-solid fa-envelope"></i>                   
-                        <input type="email" placeholder=" Email" required class="name">
-                    </div>
-                    <div class="input-name">
-                        <i class="fa-solid fa-lock"></i>                   
-                        <input type="password" placeholder=" Password" required class="text-name">
+                        <input type="text" name="fname" placeholder=" Your Name" required class="name">
 
-                        <span>  
+                    </div>
+                    <div class="input-name" id="phone">
+                        <i class="fa-solid fa-phone"></i>                   
+                        <input type="numbe" name="fphone" placeholder=" Mobile Number" required class="name">
+                    </div>
+                    <div class="input-name" id="email">
+                        <i class="fa-solid fa-envelope"></i>                   
+                        <input type="email" name="femail" placeholder=" Email" required class="name">
+                    </div>
+                    <div class="input-name" id="pass">
+                        <i class="fa-solid fa-lock"></i>                   
+                        <input type="password" name="fpass" placeholder=" Password" required class="text-name">
+
+                        <span id="cpass">  
                             <i class="fa-solid fa-lock"></i>                
-                            <input type="password" placeholder=" Confirm Password" required class="text-name">
+                            <input type="password" name="fcpass" placeholder=" Confirm Password" required class="text-name">
                         </span>
                      </div>
                      <div class="input-name">                   
@@ -97,4 +98,5 @@
             </div>
         </div>
 </body>
+<script src="script.js"></script>
 </html>
