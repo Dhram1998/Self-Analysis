@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy Plan</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="strategy-plan.css">
+    <!--font awesome-->
+
+    <script src="https://kit.fontawesome.com/63c2fed663.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navheader">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Self Analysis</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li>
+                <a href="./index.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="logout">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Div -->
+    
+        <div class="main">
+            <div class="container">
+                <h1>Plan Your Strategy</h1>
+                  <div class="input-container">
+                    <label for="rows">Enter Number of Days: </label>
+                    <input type="number" id="rows" value="3">
+                    <button onclick="createTable()">Create Table</button></div>
+                    <div id="table-container">
+
+                    </div>
+            </div>
+        </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

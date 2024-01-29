@@ -16,13 +16,13 @@
         <div class="logo1"></div>
         <ul class="menu">
             <li class="dashboard">
-                <a href="#">
+                <a href="./dashboard.html">
                     <i class="fas fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="./homepage.html">
                     <i class="fa-solid fa-house"></i>
                     <span>Home</span>
                 </a>
@@ -39,33 +39,58 @@
                     <span>Statistics</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
-                    <i class="fas fa-cog"></i>
-                    <span>Setting</span>
-                </a>
-            </li>
             <li class="logout">
-                <a href="#">
+                <a href="./index.html">
                     <i class="fas fa-sign-out-alt"></i>
                     <span>Logout</span>
                 </a>
             </li>
         </ul>
     </div>
-    <div class="main--content">
-        <div class="header--wrapper">
-            <div class="header--title">
-                <span>Primary</span>
-                <h2>Dashboard</h2>
-            </div>
-            <div class="user--info">
-                <div>
-                    <h4>Dharmendra Jha</h4>
+    <!-- main section -->
+    <main>
+        <div class="main--content">
+            <div class="header--wrapper">
+                <div class="header--title">
+                    <h1>Dashboard</h1>
+
+                    <div class="date">
+                        <input type="date">
+                    </div>
                 </div>
-                <img src="./media/Dharam_Photo.jpg" alt="">
+                <div class="user--info">
+                    <div>
+                        <h4>Dharmendra</h4>
+                    </div>
+                    <img id="profileImage" src="./media/Dharam_Photo.jpg" alt="Profile Image">
+                </div>
             </div>
         </div>
-    </div>
+
+        <div class="insights">
+            <div class="total-improvement">
+                <h3>Total Improvement</h3>
+                <div class="circular-progress" data-inner-circle-color="lightgrey" data-percentage="80" data-progress-color="crimson" data-bg-color="black">
+                    <div class="inner-circle"></div>
+                    <p class="percentage">0%</p>
+                </div>
+            </div>
+            <div class="last-24-hover-improvement">
+                <h3>Last 24 Hover Improvement</h3>
+                <div class="circular-progress" data-inner-circle-color="lightgrey" data-percentage="100" data-progress-color="crimson" data-bg-color="black">
+                    <div class="inner-circle"></div>
+                    <p class="percentage">0%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="list-of-work">
+            <h2>Workes List</h2>
+        </div>
+    </main>
+
 </body>
+
+<script src="script.js"></script>
+
 </html>
