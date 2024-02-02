@@ -140,7 +140,8 @@ main h1{
   }
   h3{
     text-align: start;
-    margin-bottom: 17px
+    margin-bottom: 17px;
+    text-wrap: nowrap;
   }
 
 main .main--content{
