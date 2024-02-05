@@ -71,7 +71,7 @@ body{
 /***************************************** Main body section ***************************************/
 main{
     margin-top: 1.4rem;
-    width: auto;
+    width: -webkit-fill-available;
 }
 
 main input{
@@ -93,6 +93,10 @@ main .date{
 main .insights{
     display: flex;
     gap: 9rem;
+    width: -webkit-fill-available;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
 }
 main h1{
     color: black;
@@ -146,8 +150,10 @@ main h1{
 
 main .main--content{
     position: relative;
-    background: #ebe9e9;
-    width: 100%;
+    background: #D3CCE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     padding: 1rem;
 }
 main .header--wrapper img{
@@ -161,7 +167,9 @@ main .header--wrapper{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background: #fff;
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 10px;
     padding: 10px 2rem;
     margin-bottom: 1rem;
@@ -177,4 +185,11 @@ main .user--info{
 h4{
     color: blue;
     cursor: pointer;
+}
+main h2{
+    text-align: center;
+    margin: 50px;
+    background: #B993D6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

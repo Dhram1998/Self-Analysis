@@ -1,12 +1,3 @@
-const changeText = function () {
-  setTimeout((document.querySelector(".logout").innerHTML = "Login"), 1000);
-};
-
-document.querySelector("span").addEventListener("click", function () {
-  changeText();
-});
-
-
 /*************************************** Form Validation *************************************************/
 
 function clearErrors(){
@@ -109,15 +100,15 @@ Array.from(circularProgress).forEach((progressBar) => {
 
 /*********************************** Profile Image *************************************************/
 
-var profileImage = document.getElementById('profileImage');
+ var profileImage = document.getElementById('profileImage');
 
-  //Add a click event listener to the image
-  profileImage.addEventListener('click', function() {
-    // Replace this with the actual code to open the profile
-    alert('Opening profile!');
-    // You can replace the alert with your logic to open the profile page.
-    // For example, you can use window.location.href = 'profile.html';
-  });
+//   //Add a click event listener to the image
+//  profileImage.addEventListener('click', function(){
+//     // Replace this with the actual code to open the profile
+//     alert('Opening profile!');
+//     // You can replace the alert with your logic to open the profile page.
+//     // For example, you can use window.location.href = 'profile.html';
+//   });
 
   /*********************************** Table in Strategy Plan page *************************************************/
 
@@ -159,3 +150,66 @@ var profileImage = document.getElementById('profileImage');
     tableContainer.innerHTML = ''; // Clear previous table
     tableContainer.appendChild(table);
 }
+
+/********************************* Image Slider*************************************** */
+
+const carouselRow = document.querySelector('.slides-row');
+const carouselSlides = document.getElementsByClassName('slide');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+
+//Declare variables
+let index = 1;
+
+width = carouselSlides[0].clientWidth;
+carouselRow.style.transform = 'translateX('+ (- width * index) + 'px)';
+
+//Go to Next slide
+nextBtn.addEventListener('click', nextSlide);
+function nextSlide(){
+  if(index >= carouselSlides.length - 1){return};
+  carouselRow.style.transition = 'transform 0.4s ease-out';
+  index++;
+  carouselRow.style.transform = 'translateX('+(- width * index) + 'px)';
+}
+
+//Go to Previous slide
+prevBtn.addEventListener('click', prevSlide);
+function prevSlide(){
+  if(index <= 0){return};
+  carouselRow.style.transition = 'transform 0.4s ease-out';
+  index--;
+  carouselRow.style.transform = 'translateX('+(- width * index) + 'px)';
+}
+
+//return to the frist slide when reaches last slide
+carouselRow.addEventListener('transitionend', function(){
+  if(carouselSlides[index].id==='fristImageDuplicate'){
+    carouselRow.style.transition = 'none';
+    index = carouselSlides.length - index;
+    carouselRow.style.transform = 'translateX('+(- width * index) + 'px)';
+  }
+  if(carouselSlides[index].id==='lastImageDuplicate'){
+    carouselRow.style.transition = 'none';
+    index = carouselSlides.length - 2;
+    carouselRow.style.transform = 'translateX('+(- width * index) + 'px)';
+  }
+});
+
+//Auto sliding
+function autosliding(){
+  deleteInterval = setInterval(timer, 4500);
+  function timer(){
+    nextSlide();
+  }
+}
+autosliding();
+
+// stop auto sliding when mouse is over 
+const mainContainer = document.querySelector('.container');
+mainContainer.addEventListener('mouseover', function(){
+  clearInterval(deleteInterval);
+});
+
+//resume sliding when mouse is out
+mainContainer.addEventListener('mouseover', autosliding);
