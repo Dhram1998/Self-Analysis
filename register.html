@@ -11,11 +11,10 @@
     
 </head>
 <body>
-    
         <div class="container">
             <h2>Registration Form</h2>
             <div class="form-container">
-                <form action="#" name="myForm" onsubmit="return validateForm()" method="post">
+                <form action="register.php" name="myForm" onsubmit="return validateForm()" method="post">
                     <div class="input-name" id="name">
                         <i class="fa-solid fa-user"></i>                    
                         <input type="text" name="fname" placeholder=" Your Name" required class="name">
@@ -41,48 +40,51 @@
                         </span>
                      </div>
                      <div class="input-name">                   
-                        <input type="radio" class="radio-button" name="gender">
+                        <input type="radio" class="radio-button" name="gender" value="m">
                         <label style="margin-right: 30px;">Male</label>
 
-                        <input type="radio" class="radio-button" name="gender">
+                        <input type="radio" class="radio-button" name="gender" value="f">
                         <label for="">Female</label>
                     </div>
                     <div class="input-name">
-                        <select class="country">
+                        <select class="country" name="state">
                             <option class="">Select your states</option>
-                            <option class="">Andhra Pradesh</option>
-                            <option class="">Arunachal Pradesh</option>
-                            <option class="">Assam</option>
-                            <option class="">Bihar</option>
-                            <option class="">Chandigarh</option>
-                            <option class="">Chhattisgarh</option>
-                            <option class="">Delhi</option>
-                            <option class="">Goa</option>
-                            <option class="">Gujarat</option>
-                            <option class="">Haryana</option>
-                            <option class="">Himachal Pradesh</option>
-                            <option class="">Jammu & Kashmir</option>
-                            <option class="">Jharkhand</option>
-                            <option class="">Karnataka</option>
-                            <option class="">Kerala</option>
-                            <option class="">Ladakh</option>
-                            <option class="">Madhya Pradesh</option>
-                            <option class="">Maharashtra</option>
-                            <option class="">Manipur</option>
-                            <option class="">Meghalaya</option>
-                            <option class="">Mizoram</option>
-                            <option class="">Nagaland</option>
-                            <option class="">Odisha</option>
-                            <option class="">Puducherry</option>
-                            <option class="">Punjab</option>
-                            <option class="">Rajasthan</option>
-                            <option class="">Sikkim</option>
-                            <option class="">Tamil Nadu</option>
-                            <option class="">Telangana</option>
-                            <option class="">Tripura</option>
-                            <option class="">Uttarakhand</option>
-                            <option class="">Uttar Pradesh</option>
-                            <option class="">West Bengal</option>
+                                <option value="AP">Andhra Pradesh</option>
+                                <option value="AR">Arunachal Pradesh</option>
+                                <option value="AS">Assam</option>
+                                <option value="BR">Bihar</option>
+                                <option value="CT">Chhattisgarh</option>
+                                <option value="GA">Gujarat</option>
+                                <option value="HR">Haryana</option>
+                                <option value="HP">Himachal Pradesh</option>
+                                <option value="JK">Jammu and Kashmir</option>
+                                <option value="GA">Goa</option>
+                                <option value="JH">Jharkhand</option>
+                                <option value="KA">Karnataka</option>
+                                <option value="KL">Kerala</option>
+                                <option value="MP">Madhya Pradesh</option>
+                                <option value="MH">Maharashtra</option>
+                                <option value="MN">Manipur</option>
+                                <option value="ML">Meghalaya</option>
+                                <option value="MZ">Mizoram</option>
+                                <option value="NL">Nagaland</option>
+                                <option value="OR">Odisha</option>
+                                <option value="PB">Punjab</option>
+                                <option value="RJ">Rajasthan</option>
+                                <option value="SK">Sikkim</option>
+                                <option value="TN">Tamil Nadu</option>
+                                <option value="TG">Telangana</option>
+                                <option value="TR">Tripura</option>
+                                <option value="UT">Uttarakhand</option>
+                                <option value="UP">Uttar Pradesh</option>
+                                <option value="WB">West Bengal</option>
+                                <option value="AN">Andaman and Nicobar Islands</option>
+                                <option value="CH">Chandigarh</option>
+                                <option value="DN">Dadra and Nagar Haveli</option>
+                                <option value="DD">Daman and Diu</option>
+                                <option value="DL">Delhi</option>
+                                <option value="LD">Lakshadweep</option>
+                                <option value="PY">Puducherry</option>
                         </select>
                         <div class="arrow"></div>
                     </div>

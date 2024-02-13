@@ -10,7 +10,9 @@ body{
     font-family: montserrat;
 }
 nav{
-    background: rgba(113, 99, 186, 255);
+    background: #373B44;
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  
+    background: linear-gradient(to right, #4286f4, #373B44);
     height: 80px;
     width: 100%;
     position: fixed;
@@ -66,7 +68,7 @@ a:hover{
     overflow: hidden;
     margin-top: 81.8px;
     width: 100%;
-    height: 550px;
+    height: 480px;
 }
 .container .slides-row{
     display: flex;
