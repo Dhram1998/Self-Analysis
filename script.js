@@ -198,7 +198,7 @@ carouselRow.addEventListener('transitionend', function(){
 
 //Auto sliding
 function autosliding(){
-  deleteInterval = setInterval(timer, 5693);
+  deleteInterval = setInterval(timer, 5573);
   function timer(){
     nextSlide();
   }
